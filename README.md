@@ -1,19 +1,8 @@
-# 尉迟公主 · 于阗（安卓壳）
+# 尉迟公主 · 于阗（安卓壳 · 自动解压版）
 
-这是一个最小的 WebView 壳工程：网页放在 `app/src/main/assets/www/index.html`，
-云端构建由 `.github/workflows/build-apk.yml` 完成。
+仓库里只需要两样东西：
+1. **一个 zip**（本工程包，名字随意，比如 游戏7-安卓工程GitHub云编译.zip）
+2. **.github/workflows/main.yml**（云端会自动把它解开再编译）
 
-## 怎么出 APK（不用装 Android Studio）
-1. 注册 GitHub 账号，新建一个仓库（Public 或 Private 都行）。
-2. 把本文件夹里的**所有文件**上传上去（网页版 GitHub：Add file → Upload files，
-   直接把文件夹拖进去即可，注意保持目录结构，尤其是 `.github` 文件夹）。
-3. 打开仓库的 **Actions** 标签页，等 1–3 分钟，看到绿色的勾。
-4. 点进那次构建 → 页面底部 **Artifacts** → 下载 `yutian-apk` → 解压得到 `app-debug.apk`。
-5. 把这个 APK 发到手机上安装（允许“未知来源”即可）。
-
-## 想改游戏内容
-只改 `app/src/main/assets/www/index.html` 就行，改完提交，Actions 会自动重新构建。
-
-## 说明
-- 不需要任何权限，不联网也能玩。
-- 用的是 debug 签名，自己装着玩没问题；要在商店上架需要换成正式签名。
+## 出 APK
+Actions → 等绿勾 → 点进去 → 底部 Artifacts → 下载 yutian-apk → 解压得到 app-debug.apk
